@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --xn-midnight: #042C53;
+  --xn-navy: #0C447C;
+  --xn-royal: #185FA5;
+  --xn-sky: #378ADD;
+  --xn-mist: #85B7EB;
+  --xn-frost: #E6F1FB;
+  --xn-obsidian: #2C2C2A;
+  --xn-slate: #444441;
+  --xn-stone: #888780;
+  --xn-pebble: #B4B2A9;
+  --xn-linen: #D3D1C7;
+  --xn-cream: #F1EFE8;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--xn-cream);
+  color: var(--xn-obsidian);
+  font-family: 'Inter', -apple-system, Arial, sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code,
+pre,
+.mono {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+/* ── Responsive section padding ── */
+.xn-section {
+  padding: 64px 0;
+}
+@media (min-width: 768px) {
+  .xn-section {
+    padding: 96px 0;
+  }
+}
+
+/* ── 2-column form grid (name fields) ── */
+.xn-form-2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 480px) {
+  .xn-form-2col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── HowItWorks step borders ── */
+.xn-step-item {
+  padding: 40px 24px;
+  border-bottom: 1px solid #D3D1C7;
+  position: relative;
+}
+.xn-step-item:last-child {
+  border-bottom: none;
+}
+@media (min-width: 1024px) {
+  .xn-step-item {
+    padding: 40px 32px;
+    border-bottom: none;
+    border-right: 1px solid #D3D1C7;
+  }
+  .xn-step-item:last-child {
+    border-right: none;
+  }
+}
+
+/* ── Stats strip — always full-width on mobile ── */
+@media (max-width: 479px) {
+  .xn-stats-strip {
+    grid-template-columns: 1fr 1fr !important;
+  }
 }
