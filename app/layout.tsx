@@ -6,7 +6,7 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -17,14 +17,22 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Xentenix — Agents · Automations · FTEs",
+  title: "Xentenix — AI for Education & Training Businesses",
   description:
-    "Xentenix is a next-generation enterprise AI platform specialising in intelligent agents, workflow automations, and FTE augmentation. Trustworthy, precise, forward-thinking.",
-  keywords: ["enterprise AI", "AI agents", "workflow automation", "FTE augmentation", "Xentenix"],
+    "Xentenix builds AI tutors, AI assessment and grading, content-to-course tools and student-support agents for academies, course creators and training companies — backed by a no-result, no-pay guarantee.",
+  keywords: [
+    "AI for education",
+    "AI tutor",
+    "AI grading",
+    "AI assessment",
+    "EdTech AI agency",
+    "AI for training companies",
+    "Xentenix",
+  ],
   openGraph: {
-    title: "Xentenix — Agents · Automations · FTEs",
+    title: "Xentenix — AI for Education & Training Businesses",
     description:
-      "Next-generation enterprise AI platform — intelligent agents, workflow automations, and FTE augmentation.",
+      "AI tutors, auto-grading and student-support agents for learning businesses. Don't pay if you don't get the result.",
     url: "https://xentenix.io",
     siteName: "Xentenix",
     type: "website",
@@ -38,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body style={{ fontFamily: "var(--font-inter), Inter, -apple-system, Arial, sans-serif" }}>
+      <body>
         {children}
       </body>
     </html>

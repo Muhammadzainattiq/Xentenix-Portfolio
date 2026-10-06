@@ -1,204 +1,63 @@
-"use client";
+import { Icon, type IconName } from "./Icons";
 
-import { useState } from "react";
-
-const services = [
+const services: { icon: IconName; title: string; description: string; points: string[] }[] = [
   {
-    number: "01",
-    title: "AI Agents",
+    icon: "book",
+    title: "AI Tutors & Course Assistants",
     description:
-      "Intelligent agents that reason, decide, and act on your behalf — handling complex multi-step workflows end-to-end, without human intervention.",
-    accent: "#378ADD",
+      "A 24/7 tutor trained on your own courses, notes and videos — answering student questions in your teaching style.",
+    points: [
+      "Grounded in your content, not the open web",
+      "Embedded in your site, LMS or WhatsApp",
+      "Multilingual student support",
+    ],
   },
   {
-    number: "02",
-    title: "Business Automations",
+    icon: "exam",
+    title: "AI Assessment & Grading",
     description:
-      "Connect every system, eliminate every manual handoff. We automate the processes that slow your business down so your team focuses on what moves it forward.",
-    accent: "#185FA5",
+      "Generate quizzes and mock exams from your material, then grade written answers against your rubric in seconds.",
+    points: [
+      "Question banks generated from your syllabus",
+      "Rubric-based grading of written answers",
+      "Personalised feedback for every student",
+    ],
   },
   {
-    number: "03",
-    title: "Digital AI FTEs",
+    icon: "layers",
+    title: "Content-to-Course Engine",
     description:
-      "AI-powered digital workers that operate like full-time employees — available around the clock, infinitely scalable, and built for your exact workflows.",
-    accent: "#0C447C",
+      "Turn webinars, PDFs and recordings into structured lessons, summaries, flashcards and practice sets.",
+    points: ["Lessons and summaries from raw material", "Flashcards and practice questions", "Faster course launches"],
+  },
+  {
+    icon: "chat",
+    title: "Student Support & Admissions Agents",
+    description:
+      "AI agents that answer prospective students, qualify leads, handle enrolment questions and book calls.",
+    points: ["Website and WhatsApp agents", "Lead qualification and follow-up", "Hand-off to your team when needed"],
   },
 ];
 
 export function Services() {
-  const [hovered, setHovered] = useState<string | null>(null);
-
   return (
-    <section
-      id="services"
-      style={{ backgroundColor: "#042C53", position: "relative", overflow: "hidden" }}
-      className="xn-section"
-    >
-      {/* Subtle background texture */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: "radial-gradient(circle, #0C447C 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
-          opacity: 0.2,
-          pointerEvents: "none",
-        }}
-      />
-
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 24px",
-          position: "relative",
-          zIndex: 10,
-        }}
-      >
-        {/* Section header */}
-        <div style={{ marginBottom: "72px" }}>
-          <p
-            style={{
-              color: "#378ADD",
-              fontFamily: "var(--font-inter), Inter, sans-serif",
-              fontSize: "11px",
-              fontWeight: 400,
-              letterSpacing: "0.3em",
-              textTransform: "uppercase",
-              marginBottom: "20px",
-            }}
-          >
-            Our Focus
-          </p>
-          <h2
-            style={{
-              color: "#E6F1FB",
-              fontFamily: "var(--font-inter), Inter, sans-serif",
-              fontWeight: 500,
-              fontSize: "clamp(42px, 7vw, 88px)",
-              lineHeight: 1.0,
-              letterSpacing: "-0.01em",
-            }}
-          >
-            We Build
-          </h2>
-        </div>
-
-        {/* Service rows */}
-        <div>
-          {services.map(({ number, title, description }, i) => (
-            <div key={number}>
-              {/* Top divider */}
-              <div
-                style={{
-                  height: "1px",
-                  backgroundColor: hovered === number ? "#378ADD" : "#185FA5",
-                  transition: "background-color 0.3s",
-                }}
-              />
-
-              <div
-                onMouseEnter={() => setHovered(number)}
-                onMouseLeave={() => setHovered(null)}
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "120px 1fr",
-                  gap: "0 48px",
-                  padding: "48px 0",
-                  cursor: "default",
-                  alignItems: "center",
-                }}
-                className="sm:grid-cols-[120px_1fr_auto]"
-              >
-                {/* Number */}
-                <span
-                  style={{
-                    color: hovered === number ? "#378ADD" : "#1a4a7a",
-                    fontFamily: "var(--font-inter), Inter, sans-serif",
-                    fontSize: "clamp(48px, 6vw, 72px)",
-                    fontWeight: 500,
-                    letterSpacing: "-0.03em",
-                    lineHeight: 1,
-                    transition: "color 0.3s",
-                  }}
-                >
-                  {number}
-                </span>
-
-                {/* Content */}
-                <div>
-                  <h3
-                    style={{
-                      color: hovered === number ? "#E6F1FB" : "#85B7EB",
-                      fontFamily: "var(--font-inter), Inter, sans-serif",
-                      fontWeight: 500,
-                      fontSize: "clamp(26px, 3.5vw, 44px)",
-                      lineHeight: 1.1,
-                      letterSpacing: "-0.01em",
-                      marginBottom: "12px",
-                      transition: "color 0.3s",
-                    }}
-                  >
-                    {title}
-                  </h3>
-                  <p
-                    style={{
-                      color: "#85B7EB",
-                      fontFamily: "var(--font-inter), Inter, sans-serif",
-                      fontSize: "16px",
-                      lineHeight: 1.7,
-                      maxWidth: "520px",
-                      opacity: hovered === number ? 1 : 0.65,
-                      transition: "opacity 0.3s",
-                    }}
-                  >
-                    {description}
-                  </p>
-                </div>
-
-                {/* Arrow — visible on hover */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    opacity: hovered === number ? 1 : 0,
-                    transform: hovered === number ? "translateX(0)" : "translateX(-8px)",
-                    transition: "opacity 0.3s, transform 0.3s",
-                  }}
-                  className="hidden sm:flex"
-                >
-                  <svg
-                    width="36"
-                    height="36"
-                    viewBox="0 0 36 36"
-                    fill="none"
-                    aria-hidden="true"
-                  >
-                    <circle cx="18" cy="18" r="17" stroke="#378ADD" strokeWidth="1.5" />
-                    <path
-                      d="M13 18h10M19 14l4 4-4 4"
-                      stroke="#378ADD"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
+    <section id="services" className="xn-section xn-section--surface">
+      <div className="xn-container">
+        <h2 className="xn-h2">AI Solutions for Learning Businesses</h2>
+        <div className="xn-cards">
+          {services.map((service) => (
+            <article key={service.title} className="xn-card">
+              <div className="xn-icon-tile">
+                <Icon name={service.icon} size={26} />
               </div>
-
-              {/* Bottom divider on last item */}
-              {i === services.length - 1 && (
-                <div
-                  style={{
-                    height: "1px",
-                    backgroundColor: hovered === number ? "#378ADD" : "#185FA5",
-                    transition: "background-color 0.3s",
-                  }}
-                />
-              )}
-            </div>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+              <ul>
+                {service.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            </article>
           ))}
         </div>
       </div>

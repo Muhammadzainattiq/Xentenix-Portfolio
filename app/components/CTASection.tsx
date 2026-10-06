@@ -1,321 +1,74 @@
-import { GridNodeMark } from "./GridNodeMark";
+import { Icon } from "./Icons";
+
+const promises = [
+  "A free AI tutor demo built on one of your courses",
+  "A clear, measurable success target agreed up front",
+  "Zero fees if we don't deliver the desired result",
+];
 
 export function CTASection() {
   return (
-    <section
-      id="contact"
-      style={{ backgroundColor: "#042C53", position: "relative", overflow: "hidden" }}
-      className="xn-section"
-    >
-      {/* Background dot grid */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: "radial-gradient(circle, #0C447C 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-          opacity: 0.3,
-          pointerEvents: "none",
-        }}
-      />
-
-      {/* Decorative mark — bottom right */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          bottom: "-80px",
-          right: "-80px",
-          opacity: 0.06,
-          pointerEvents: "none",
-        }}
-      >
-        <GridNodeMark size={400} variant="dark" />
-      </div>
-
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 24px",
-          position: "relative",
-          zIndex: 10,
-        }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gap: "48px",
-            alignItems: "center",
-          }}
-          className="lg:grid-cols-2"
-        >
-          {/* Left */}
-          <div>
-            <p
-              style={{
-                color: "#378ADD",
-                fontFamily: "var(--font-inter), Inter, sans-serif",
-                fontSize: "11px",
-                fontWeight: 400,
-                letterSpacing: "0.25em",
-                textTransform: "uppercase",
-                marginBottom: "16px",
-              }}
-            >
-              Ready to start
-            </p>
-            <h2
-              style={{
-                color: "#E6F1FB",
-                fontFamily: "var(--font-inter), Inter, sans-serif",
-                fontWeight: 500,
-                fontSize: "clamp(32px, 4vw, 52px)",
-                lineHeight: 1.1,
-                letterSpacing: "0.01em",
-                marginBottom: "24px",
-              }}
-            >
-              Built for what<br />comes next.
-            </h2>
-            <p
-              style={{
-                color: "#85B7EB",
-                fontFamily: "var(--font-inter), Inter, sans-serif",
-                fontSize: "17px",
-                lineHeight: 1.7,
-                maxWidth: "440px",
-              }}
-            >
-              Talk to a Xentenix solutions engineer. We&apos;ll map your highest-impact
-              automation opportunities and show you exactly what the platform can do
-              for your operations.
-            </p>
-          </div>
-
-          {/* Right — form */}
-          <div
-            style={{
-              backgroundColor: "#0C447C",
-              border: "1px solid #185FA5",
-              borderRadius: "16px",
-              padding: "40px",
-            }}
-          >
-            <h3
-              style={{
-                color: "#E6F1FB",
-                fontFamily: "var(--font-inter), Inter, sans-serif",
-                fontWeight: 500,
-                fontSize: "20px",
-                marginBottom: "8px",
-              }}
-            >
-              Get in touch
-            </h3>
-            <p
-              style={{
-                color: "#85B7EB",
-                fontFamily: "var(--font-inter), Inter, sans-serif",
-                fontSize: "14px",
-                lineHeight: 1.6,
-                marginBottom: "28px",
-              }}
-            >
-              Response within one business day.
-            </p>
-
-            <form style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-              <div className="xn-form-2col">
-                <div>
-                  <label
-                    htmlFor="fname"
-                    style={{
-                      display: "block",
-                      color: "#85B7EB",
-                      fontFamily: "var(--font-inter), Inter, sans-serif",
-                      fontSize: "11px",
-                      letterSpacing: "0.15em",
-                      textTransform: "uppercase",
-                      marginBottom: "6px",
-                    }}
-                  >
-                    First name
-                  </label>
-                  <input
-                    id="fname"
-                    type="text"
-                    placeholder="Jane"
-                    style={{
-                      width: "100%",
-                      backgroundColor: "#042C53",
-                      border: "1px solid #185FA5",
-                      borderRadius: "8px",
-                      padding: "10px 14px",
-                      color: "#E6F1FB",
-                      fontFamily: "var(--font-inter), Inter, sans-serif",
-                      fontSize: "14px",
-                      outline: "none",
-                    }}
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="lname"
-                    style={{
-                      display: "block",
-                      color: "#85B7EB",
-                      fontFamily: "var(--font-inter), Inter, sans-serif",
-                      fontSize: "11px",
-                      letterSpacing: "0.15em",
-                      textTransform: "uppercase",
-                      marginBottom: "6px",
-                    }}
-                  >
-                    Last name
-                  </label>
-                  <input
-                    id="lname"
-                    type="text"
-                    placeholder="Smith"
-                    style={{
-                      width: "100%",
-                      backgroundColor: "#042C53",
-                      border: "1px solid #185FA5",
-                      borderRadius: "8px",
-                      padding: "10px 14px",
-                      color: "#E6F1FB",
-                      fontFamily: "var(--font-inter), Inter, sans-serif",
-                      fontSize: "14px",
-                      outline: "none",
-                    }}
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  style={{
-                    display: "block",
-                    color: "#85B7EB",
-                    fontFamily: "var(--font-inter), Inter, sans-serif",
-                    fontSize: "11px",
-                    letterSpacing: "0.15em",
-                    textTransform: "uppercase",
-                    marginBottom: "6px",
-                  }}
-                >
-                  Work email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="jane@company.com"
-                  style={{
-                    width: "100%",
-                    backgroundColor: "#042C53",
-                    border: "1px solid #185FA5",
-                    borderRadius: "8px",
-                    padding: "10px 14px",
-                    color: "#E6F1FB",
-                    fontFamily: "var(--font-inter), Inter, sans-serif",
-                    fontSize: "14px",
-                    outline: "none",
-                  }}
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="company"
-                  style={{
-                    display: "block",
-                    color: "#85B7EB",
-                    fontFamily: "var(--font-inter), Inter, sans-serif",
-                    fontSize: "11px",
-                    letterSpacing: "0.15em",
-                    textTransform: "uppercase",
-                    marginBottom: "6px",
-                  }}
-                >
-                  Company
-                </label>
-                <input
-                  id="company"
-                  type="text"
-                  placeholder="Acme Corp"
-                  style={{
-                    width: "100%",
-                    backgroundColor: "#042C53",
-                    border: "1px solid #185FA5",
-                    borderRadius: "8px",
-                    padding: "10px 14px",
-                    color: "#E6F1FB",
-                    fontFamily: "var(--font-inter), Inter, sans-serif",
-                    fontSize: "14px",
-                    outline: "none",
-                  }}
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  style={{
-                    display: "block",
-                    color: "#85B7EB",
-                    fontFamily: "var(--font-inter), Inter, sans-serif",
-                    fontSize: "11px",
-                    letterSpacing: "0.15em",
-                    textTransform: "uppercase",
-                    marginBottom: "6px",
-                  }}
-                >
-                  What are you trying to solve?
-                </label>
-                <textarea
-                  id="message"
-                  rows={3}
-                  placeholder="Tell us about your automation challenges..."
-                  style={{
-                    width: "100%",
-                    backgroundColor: "#042C53",
-                    border: "1px solid #185FA5",
-                    borderRadius: "8px",
-                    padding: "10px 14px",
-                    color: "#E6F1FB",
-                    fontFamily: "var(--font-inter), Inter, sans-serif",
-                    fontSize: "14px",
-                    outline: "none",
-                    resize: "vertical",
-                  }}
-                />
-              </div>
-
-              <button
-                type="submit"
-                style={{
-                  backgroundColor: "#378ADD",
-                  color: "#ffffff",
-                  fontFamily: "var(--font-inter), Inter, sans-serif",
-                  fontSize: "14px",
-                  fontWeight: 500,
-                  padding: "14px 24px",
-                  borderRadius: "8px",
-                  border: "none",
-                  cursor: "pointer",
-                  letterSpacing: "0.02em",
-                  marginTop: "8px",
-                }}
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+    <>
+      <section className="xn-cta-band">
+        <div className="xn-container xn-cta-band__inner">
+          <h2>
+            Ready for AI that moves
+            <br />
+            <span>your learning outcomes?</span>
+          </h2>
+          <a href="#contact" className="xn-btn xn-btn--white">
+            Get Your Free Demo <Icon name="arrow" size={18} />
+          </a>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section id="contact" className="xn-section">
+        <div className="xn-container xn-contact">
+          <div>
+            <h2 className="xn-h2">Let&apos;s build your free demo</h2>
+            <p className="xn-contact__lead">
+              Tell us about your academy or courses. We&apos;ll reply within one business day with how
+              we&apos;d get you the result.
+            </p>
+            <ul className="xn-checklist">
+              {promises.map((item) => (
+                <li key={item}>
+                  <Icon name="check" size={20} strokeWidth={2.2} />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <form className="xn-form">
+            <div className="xn-form-2col">
+              <div className="xn-field">
+                <label htmlFor="firstName">First name</label>
+                <input id="firstName" name="firstName" type="text" placeholder="Jane" autoComplete="given-name" />
+              </div>
+              <div className="xn-field">
+                <label htmlFor="lastName">Last name</label>
+                <input id="lastName" name="lastName" type="text" placeholder="Smith" autoComplete="family-name" />
+              </div>
+            </div>
+            <div className="xn-field">
+              <label htmlFor="email">Work email</label>
+              <input id="email" name="email" type="email" placeholder="jane@academy.com" autoComplete="email" />
+            </div>
+            <div className="xn-field">
+              <label htmlFor="company">Academy / company</label>
+              <input id="company" name="company" type="text" placeholder="Bright Minds Academy" autoComplete="organization" />
+            </div>
+            <div className="xn-field">
+              <label htmlFor="message">What outcome do you need?</label>
+              <textarea id="message" name="message" placeholder="e.g. Our teachers spend 15 hours a week grading mock tests..." />
+            </div>
+            <button type="submit" className="xn-btn xn-btn--primary">
+              Request My Free Demo <Icon name="arrow" size={18} />
+            </button>
+          </form>
+        </div>
+      </section>
+    </>
   );
 }

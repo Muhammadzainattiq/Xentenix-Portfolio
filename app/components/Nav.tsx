@@ -1,174 +1,84 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { GridNodeMark } from "./GridNodeMark";
+import { Icon } from "./Icons";
 
-const navLinks: { href: string; label: string }[] = [];
+const navLinks = [
+  { href: "#services", label: "Services" },
+  { href: "#work", label: "Our Work" },
+  { href: "#process", label: "How We Work" },
+  { href: "#difference", label: "Our Guarantee" },
+  { href: "#contact", label: "Contact" },
+];
 
 export function Nav() {
-  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    const onResize = () => window.innerWidth >= 960 && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("resize", onResize);
+    };
+  }, [open]);
+
   return (
-    <nav
-      style={{
-        backgroundColor: "#042C53",
-        borderBottom: scrolled ? "1px solid #0C447C" : "1px solid transparent",
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 50,
-        transition: "border-color 0.3s",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 24px",
-          height: "64px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        {/* Logo */}
-        <a href="#hero" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none" }}>
-          <GridNodeMark size={34} variant="dark" />
-          <span
-            style={{
-              color: "#E6F1FB",
-              fontFamily: "var(--font-inter), Inter, sans-serif",
-              fontWeight: 500,
-              fontSize: "14px",
-              letterSpacing: "0.3em",
-            }}
-          >
-            XENTENIX
-          </span>
+    <header className={`xn-nav${scrolled ? " xn-nav--scrolled" : ""}`}>
+      <nav className="xn-nav__bar" aria-label="Main">
+        <a href="#hero" className="xn-nav__logo">
+          <GridNodeMark size={30} variant="light" />
+          Xentenix
         </a>
 
-        {/* Desktop links */}
-        <div style={{ display: "flex", alignItems: "center", gap: "32px" }} className="hidden md:flex">
+        <ul className="xn-nav__links">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              style={{
-                color: "#85B7EB",
-                fontFamily: "var(--font-inter), Inter, sans-serif",
-                fontSize: "14px",
-                letterSpacing: "0.03em",
-                textDecoration: "none",
-                transition: "color 0.2s",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#E6F1FB")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#85B7EB")}
-            >
-              {link.label}
-            </a>
+            <li key={link.href}>
+              <a href={link.href}>{link.label}</a>
+            </li>
           ))}
-          <a
-            href="#contact"
-            style={{
-              backgroundColor: "#378ADD",
-              color: "#ffffff",
-              fontFamily: "var(--font-inter), Inter, sans-serif",
-              fontSize: "13px",
-              fontWeight: 500,
-              padding: "8px 20px",
-              borderRadius: "8px",
-              textDecoration: "none",
-              letterSpacing: "0.02em",
-              transition: "background-color 0.2s",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#185FA5")}
-            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#378ADD")}
-          >
-            Get Started
-          </a>
-        </div>
+        </ul>
 
-        {/* Mobile toggle */}
+        <a href="#contact" className="xn-btn xn-btn--primary xn-btn--sm xn-nav__cta">
+          Contact Us <Icon name="arrow" size={16} />
+        </a>
+
         <button
-          onClick={() => setOpen(!open)}
-          style={{
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-            color: "#E6F1FB",
-            padding: "4px",
-          }}
-          className="md:hidden"
-          aria-label="Toggle navigation"
+          type="button"
+          className="xn-nav__toggle"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="xn-mobile-menu"
+          onClick={() => setOpen((v) => !v)}
         >
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="2">
-            {open ? (
-              <path d="M17 5L5 17M5 5l12 12" strokeLinecap="round" />
-            ) : (
-              <>
-                <path d="M3 7h16M3 15h16" strokeLinecap="round" />
-              </>
-            )}
-          </svg>
+          <Icon name={open ? "close" : "menu"} size={24} />
         </button>
-      </div>
+      </nav>
 
-      {/* Mobile menu */}
       {open && (
-        <div
-          style={{
-            backgroundColor: "#0C447C",
-            borderTop: "1px solid #185FA5",
-            padding: "16px 24px 24px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "16px",
-          }}
-          className="md:hidden"
-        >
+        <div id="xn-mobile-menu" className="xn-nav__mobile">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              style={{
-                color: "#E6F1FB",
-                fontFamily: "var(--font-inter), Inter, sans-serif",
-                fontSize: "15px",
-                textDecoration: "none",
-              }}
-            >
+            <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            onClick={() => setOpen(false)}
-            style={{
-              backgroundColor: "#378ADD",
-              color: "#ffffff",
-              fontFamily: "var(--font-inter), Inter, sans-serif",
-              fontSize: "14px",
-              fontWeight: 500,
-              padding: "12px 20px",
-              borderRadius: "8px",
-              textDecoration: "none",
-              textAlign: "center",
-              marginTop: "8px",
-            }}
-          >
-            Get Started
+          <a href="#contact" className="xn-btn xn-btn--primary" onClick={() => setOpen(false)}>
+            Contact Us <Icon name="arrow" size={16} />
           </a>
         </div>
       )}
-    </nav>
+    </header>
   );
 }

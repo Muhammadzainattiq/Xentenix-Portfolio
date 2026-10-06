@@ -1,33 +1,32 @@
-"use client";
-
 import { GridNodeMark } from "./GridNodeMark";
 
 const footerLinks = [
   {
-    heading: "Platform",
+    heading: "Services",
     links: [
-      { label: "Xentenix Core", href: "#products" },
-      { label: "Xentenix Edge", href: "#products" },
-      { label: "Xentenix Nexus", href: "#products" },
-      { label: "Xentenix Agents", href: "#products" },
+      { label: "AI Tutors", href: "#services" },
+      { label: "AI Assessment & Grading", href: "#services" },
+      { label: "Content-to-Course", href: "#services" },
+      { label: "Student Support Agents", href: "#services" },
     ],
   },
   {
     heading: "Company",
     links: [
-      { label: "About", href: "#about" },
-      { label: "Services", href: "#services" },
+      { label: "Our Work", href: "#work" },
+      { label: "How We Work", href: "#process" },
+      { label: "Our Guarantee", href: "#difference" },
       { label: "Contact", href: "#contact" },
-      { label: "Careers", href: "#" },
+      { label: "Founder", href: "https://zainattiq.com" },
     ],
   },
   {
     heading: "Resources",
     links: [
       { label: "Documentation", href: "#" },
-      { label: "API Reference", href: "#" },
       { label: "Status", href: "#" },
       { label: "Security", href: "#" },
+      { label: "Privacy Policy", href: "#" },
     ],
   },
 ];
@@ -64,120 +63,34 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer style={{ backgroundColor: "#2C2C2A" }}>
-      {/* Main footer */}
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "64px 24px 48px",
-        }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gap: "48px",
-            marginBottom: "56px",
-          }}
-          className="sm:grid-cols-2 lg:grid-cols-4"
-        >
-          {/* Brand column */}
+    <footer className="xn-footer">
+      <div className="xn-container">
+        <div className="xn-footer__grid">
           <div>
-            <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "20px" }}>
+            <div className="xn-footer__brand">
               <GridNodeMark size={32} variant="dark" />
-              <span
-                style={{
-                  color: "#E6F1FB",
-                  fontFamily: "var(--font-inter), Inter, sans-serif",
-                  fontWeight: 500,
-                  fontSize: "13px",
-                  letterSpacing: "0.3em",
-                }}
-              >
-                XENTENIX
-              </span>
+              Xentenix
             </div>
-            <p
-              style={{
-                color: "#888780",
-                fontFamily: "var(--font-inter), Inter, sans-serif",
-                fontSize: "14px",
-                lineHeight: 1.7,
-                marginBottom: "24px",
-                maxWidth: "240px",
-              }}
-            >
-              Next-generation enterprise AI — agents, automations, and FTE augmentation.
+            <p className="xn-footer__tagline">
+              AI for education and training businesses — tutors, grading and student-support agents, backed
+              by a no-result, no-pay guarantee.
             </p>
-            {/* Social links */}
-            <div style={{ display: "flex", gap: "12px" }}>
+            <div className="xn-footer__social">
               {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    color: "#888780",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "36px",
-                    height: "36px",
-                    borderRadius: "8px",
-                    backgroundColor: "#444441",
-                    transition: "color 0.2s, background-color 0.2s",
-                    textDecoration: "none",
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLElement).style.color = "#E6F1FB";
-                    (e.currentTarget as HTMLElement).style.backgroundColor = "#185FA5";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.color = "#888780";
-                    (e.currentTarget as HTMLElement).style.backgroundColor = "#444441";
-                  }}
-                >
+                <a key={social.label} href={social.href} aria-label={social.label} target="_blank" rel="noopener noreferrer">
                   {social.icon}
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Link columns */}
           {footerLinks.map(({ heading, links }) => (
             <div key={heading}>
-              <p
-                style={{
-                  color: "#E6F1FB",
-                  fontFamily: "var(--font-inter), Inter, sans-serif",
-                  fontSize: "12px",
-                  fontWeight: 500,
-                  letterSpacing: "0.2em",
-                  textTransform: "uppercase",
-                  marginBottom: "20px",
-                }}
-              >
-                {heading}
-              </p>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "12px" }}>
+              <h4>{heading}</h4>
+              <ul>
                 {links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
-                      style={{
-                        color: "#888780",
-                        fontFamily: "var(--font-inter), Inter, sans-serif",
-                        fontSize: "14px",
-                        textDecoration: "none",
-                        transition: "color 0.2s",
-                      }}
-                      onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#E6F1FB")}
-                      onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#888780")}
-                    >
-                      {link.label}
-                    </a>
+                    <a href={link.href}>{link.label}</a>
                   </li>
                 ))}
               </ul>
@@ -185,63 +98,9 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Domain row */}
-        <div
-          style={{
-            borderTop: "1px solid #444441",
-            paddingTop: "32px",
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            alignItems: "center",
-            gap: "16px",
-          }}
-        >
-          <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-            {["xentenix.io", "xentenix.ai", "getxentenix.com"].map((domain) => (
-              <span
-                key={domain}
-                style={{
-                  color: "#888780",
-                  fontFamily: "var(--font-jetbrains), JetBrains Mono, monospace",
-                  fontSize: "12px",
-                  letterSpacing: "0.05em",
-                }}
-              >
-                {domain}
-              </span>
-            ))}
-          </div>
-
-          <p
-            style={{
-              color: "#888780",
-              fontFamily: "var(--font-inter), Inter, sans-serif",
-              fontSize: "13px",
-            }}
-          >
-            © 2026 Xentenix. All rights reserved.
-          </p>
-
-          <div style={{ display: "flex", gap: "20px" }}>
-            {["Privacy Policy", "Terms of Service"].map((item) => (
-              <a
-                key={item}
-                href="#"
-                style={{
-                  color: "#888780",
-                  fontFamily: "var(--font-inter), Inter, sans-serif",
-                  fontSize: "13px",
-                  textDecoration: "none",
-                  transition: "color 0.2s",
-                }}
-                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#E6F1FB")}
-                onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#888780")}
-              >
-                {item}
-              </a>
-            ))}
-          </div>
+        <div className="xn-footer__bottom">
+          <span>© 2026 Xentenix. All rights reserved.</span>
+          <span className="mono">xentenix.io</span>
         </div>
       </div>
     </footer>
