@@ -40,12 +40,6 @@ const projects: Project[] = [
     href: "https://duoread.app",
   },
   {
-    title: "Career Compass",
-    tag: "EdTech · Guidance",
-    summary: "Six AI agents for resumes, interviews, learning paths and university matching.",
-    image: "/work/career-compass.png",
-  },
-  {
     title: "TechCadets",
     tag: "EdTech · K-12 Platform",
     summary: "Live online AI and coding classes for grades 5 to 12 in Pakistan, with junior and senior tracks.",
@@ -60,19 +54,6 @@ const projects: Project[] = [
     href: "https://www.hikmahai.site/",
   },
   {
-    title: "QuickRabita",
-    tag: "Multi-Agent System",
-    summary: "Emergency triage that classifies requests and routes them to specialised agents.",
-    image: "/work/quickrabita.png",
-    href: "https://quick-rabita-fe.vercel.app/",
-  },
-  {
-    title: "CodeSync",
-    tag: "RAG · MCP",
-    summary: "Framework-specific documentation assistant for developers and coding agents.",
-    image: "/work/codesync.png",
-  },
-  {
     title: "LLMetric",
     tag: "AI SaaS",
     summary: "Measures and improves how brands show up in ChatGPT, Perplexity and Grok answers.",
@@ -83,6 +64,12 @@ const projects: Project[] = [
     tag: "Health AI",
     summary: "AI skin-health companion combining medical AI with dermatologist consultations.",
     image: "/work/epidexa.png",
+  },
+  {
+    title: "Career Compass",
+    tag: "EdTech · Guidance",
+    summary: "Six AI agents for resumes, interviews, learning paths and university matching.",
+    image: "/work/career-compass.png",
   },
 ];
 
