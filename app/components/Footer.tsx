@@ -100,7 +100,7 @@ export function Footer() {
 
         <div className="xn-footer__bottom">
           <span>© 2026 Xentenix. All rights reserved.</span>
-          <span className="mono">xentenix.io</span>
+          <span className="mono">xentenix.com</span>
         </div>
       </div>
     </footer>

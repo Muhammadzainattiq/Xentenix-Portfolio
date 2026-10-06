@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Xentenix — AI for Education & Training Businesses",
     description:
       "AI tutors, auto-grading and student-support agents for learning businesses. Don't pay if you don't get the result.",
-    url: "https://xentenix.io",
+    url: "https://xentenix.com",
     siteName: "Xentenix",
     type: "website",
   },

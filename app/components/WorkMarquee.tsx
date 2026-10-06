@@ -12,11 +12,11 @@ type Project = {
 // Education projects lead; the rest prove range across AI agents and RAG.
 const projects: Project[] = [
   {
-    title: "ExamineAI",
+    title: "Examinie AI",
     tag: "EdTech · Assessment",
     summary: "AI exam generation and rubric-based grading with instant feedback and analytics.",
     image: "/work/examineai.png",
-    href: "https://examinie.online",
+    href: "https://www.examinie.online/",
   },
   {
     title: "IELTS Karo",
@@ -83,20 +83,6 @@ const projects: Project[] = [
     tag: "Health AI",
     summary: "AI skin-health companion combining medical AI with dermatologist consultations.",
     image: "/work/epidexa.png",
-  },
-  {
-    title: "Headline AI",
-    tag: "Content Generation",
-    summary: "Generates headlines, marketing copy and social posts with A/B testing.",
-    image: "/work/headline-ai.png",
-    href: "https://headline-ai-fe.vercel.app",
-  },
-  {
-    title: "ClimeAI",
-    tag: "AI Agents",
-    summary: "Weather-aware travel and event planning powered by LangGraph agents.",
-    image: "/work/climeai.png",
-    href: "https://clime-ai.vercel.app/",
   },
 ];
 
