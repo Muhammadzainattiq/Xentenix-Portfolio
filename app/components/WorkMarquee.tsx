@@ -71,6 +71,13 @@ const projects: Project[] = [
     summary: "Six AI agents for resumes, interviews, learning paths and university matching.",
     image: "/work/career-compass.png",
   },
+  {
+    title: "AgentLab",
+    tag: "EdTech · AI Sandbox",
+    summary: "Hands-on sandbox for learning agentic AI: models, tool calling, MCP and memory, one concept at a time.",
+    image: "/work/agentlab.png",
+    href: "https://www.zainattiq.com/agentlab",
+  },
 ];
 
 export function WorkMarquee() {

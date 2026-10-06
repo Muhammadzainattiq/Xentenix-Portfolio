@@ -1020,6 +1020,97 @@ a.xn-project:hover {
   margin: 0;
 }
 
+/* ── Free product audit ── */
+#audit {
+  /* Follows the white Audience section, so the framed panel carries the separation. */
+  padding-top: 0;
+}
+.xn-audit {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  background: var(--xn-frost);
+  border: 1px solid rgba(55, 138, 221, 0.25);
+  border-radius: 24px;
+  padding: 32px 24px;
+}
+@media (min-width: 640px) {
+  .xn-audit {
+    padding: 48px;
+  }
+}
+@media (min-width: 1024px) {
+  .xn-audit {
+    grid-template-columns: 1fr 1.15fr;
+    gap: 56px;
+    padding: 64px;
+  }
+}
+.xn-audit__badge {
+  display: inline-block;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--xn-primary);
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin-bottom: 20px;
+}
+.xn-audit__intro .xn-h2 {
+  font-size: clamp(32px, 4.2vw, 48px);
+  margin-bottom: 20px;
+}
+.xn-audit__intro p {
+  color: var(--xn-slate);
+  font-size: 17px;
+  margin: 0 0 32px;
+  max-width: 480px;
+}
+.xn-audit__areas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 640px) {
+  .xn-audit__areas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.xn-audit__areas li {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px -6px rgba(4, 44, 83, 0.12);
+}
+.xn-audit__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--xn-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.xn-audit__areas h3 {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 6px;
+}
+.xn-audit__areas p {
+  color: var(--xn-muted);
+  font-size: 14.5px;
+  margin: 0;
+}
+
 /* ── Accessibility ── */
 a:focus-visible,
 button:focus-visible {
