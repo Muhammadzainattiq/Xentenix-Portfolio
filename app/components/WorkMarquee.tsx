@@ -19,6 +19,13 @@ const projects: Project[] = [
     href: "https://examinie.online",
   },
   {
+    title: "IELTS Karo",
+    tag: "EdTech · Test Prep",
+    summary: "AI IELTS prep for all four skills, with a live AI speaking examiner and instant band scores.",
+    image: "/work/ieltskaro.png",
+    href: "https://ieltskaro.com/",
+  },
+  {
     title: "PanaAI",
     tag: "EdTech · Multi-Agent",
     summary: "Agents for onboarding, learning, assessment and revision across the student journey, for Panaversity.",
@@ -37,6 +44,20 @@ const projects: Project[] = [
     tag: "EdTech · Guidance",
     summary: "Six AI agents for resumes, interviews, learning paths and university matching.",
     image: "/work/career-compass.png",
+  },
+  {
+    title: "TechCadets",
+    tag: "EdTech · K-12 Platform",
+    summary: "Live online AI and coding classes for grades 5 to 12 in Pakistan, with junior and senior tracks.",
+    image: "/work/techcadets.png",
+    href: "https://www.techcadets.pk/",
+  },
+  {
+    title: "Hikmah AI",
+    tag: "EdTech · Islamic Studies",
+    summary: "AI companion for Dars-e-Nizami that decodes classical Arabic texts through five scholarly lenses.",
+    image: "/work/hikmahai.png",
+    href: "https://www.hikmahai.site/",
   },
   {
     title: "QuickRabita",
