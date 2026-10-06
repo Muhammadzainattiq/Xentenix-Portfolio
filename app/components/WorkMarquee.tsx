@@ -19,6 +19,13 @@ const projects: Project[] = [
     href: "https://examinie.online",
   },
   {
+    title: "PanaAI",
+    tag: "EdTech · Multi-Agent",
+    summary: "Agents for onboarding, learning, assessment and revision across the student journey, for Panaversity.",
+    image: "/work/panaai.png",
+    href: "https://panaversity.org/",
+  },
+  {
     title: "DuoRead",
     tag: "EdTech · AI Reading",
     summary: "Turns any PDF into a study partner: chat, summaries, translations and vocabulary.",
@@ -30,13 +37,6 @@ const projects: Project[] = [
     tag: "EdTech · Guidance",
     summary: "Six AI agents for resumes, interviews, learning paths and university matching.",
     image: "/work/career-compass.png",
-  },
-  {
-    title: "PersonaAgent",
-    tag: "Assessment Agent",
-    summary: "Conversational personality assessment through natural dialogue with AI agents.",
-    image: "/work/persona-agent.png",
-    href: "https://persona-agent.vercel.app/",
   },
   {
     title: "QuickRabita",
@@ -62,13 +62,6 @@ const projects: Project[] = [
     tag: "Health AI",
     summary: "AI skin-health companion combining medical AI with dermatologist consultations.",
     image: "/work/epidexa.png",
-  },
-  {
-    title: "Onboarding Agent",
-    tag: "Conversational AI",
-    summary: "Dialog-based signup and onboarding agent with an analytics dashboard.",
-    image: "/work/onboarding-agent.jpg",
-    href: "https://onboarding-agent-frontend.vercel.app/",
   },
   {
     title: "Headline AI",

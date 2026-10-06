@@ -87,6 +87,13 @@ You already have proof: about 10 shipped AI products, 4 blog posts, and past cli
 
 ---
 
+## Decisions made
+- **Wider field (website and brand):** AI for Education & Training businesses.
+- **Who we serve:** test-prep and coaching academies, course creators, training and L&D companies, EdTech startups. The first outreach group stays flexible.
+- **Services:** AI Tutors, AI Assessment & Grading, Content-to-Course, Student Support & Admissions Agents.
+- **Entry offer / main CTA:** a free AI tutor demo built on the prospect's own course.
+- **Proof:** an infinite marquee of 10 shipped projects. EdTech projects lead (ExamineAI, PanaAI, DuoRead, Career Compass), followed by other AI work.
+
 ## Open decisions
 1. **Niche:** which 1–2 target customers?
 2. **Projects:** which 4–6 become case studies, and do you have client permission or results numbers for them?
