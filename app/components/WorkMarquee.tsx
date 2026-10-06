@@ -54,6 +54,13 @@ const projects: Project[] = [
     href: "https://www.hikmahai.site/",
   },
   {
+    title: "AgentLab",
+    tag: "EdTech · AI Sandbox",
+    summary: "Hands-on sandbox for learning agentic AI: models, tool calling, MCP and memory, one concept at a time.",
+    image: "/work/agentlab.png",
+    href: "https://www.zainattiq.com/agentlab",
+  },
+  {
     title: "LLMetric",
     tag: "AI SaaS",
     summary: "Measures and improves how brands show up in ChatGPT, Perplexity and Grok answers.",
@@ -70,13 +77,6 @@ const projects: Project[] = [
     tag: "EdTech · Guidance",
     summary: "Six AI agents for resumes, interviews, learning paths and university matching.",
     image: "/work/career-compass.png",
-  },
-  {
-    title: "AgentLab",
-    tag: "EdTech · AI Sandbox",
-    summary: "Hands-on sandbox for learning agentic AI: models, tool calling, MCP and memory, one concept at a time.",
-    image: "/work/agentlab.png",
-    href: "https://www.zainattiq.com/agentlab",
   },
 ];
 
