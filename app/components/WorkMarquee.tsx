@@ -65,6 +65,7 @@ const projects: Project[] = [
     tag: "AI SaaS",
     summary: "Measures and improves how brands show up in ChatGPT, Perplexity and Grok answers.",
     image: "/work/llmetric.png",
+    href: "https://www.llmetric.ai/",
   },
   {
     title: "Epidexa",

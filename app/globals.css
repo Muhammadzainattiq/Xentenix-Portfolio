@@ -708,8 +708,8 @@ pre,
 }
 @media (min-width: 960px) {
   .xn-contact {
-    grid-template-columns: 1fr 1.1fr;
-    gap: 72px;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 64px;
   }
 }
 .xn-contact__lead {
@@ -736,56 +736,27 @@ pre,
   flex-shrink: 0;
   margin-top: 3px;
 }
-.xn-form {
-  background: var(--xn-surface);
+.xn-contact__alt {
+  margin: 28px 0 0;
+  color: var(--xn-muted);
+  font-size: 15px;
+}
+.xn-contact__alt a {
+  color: var(--xn-primary);
+  font-weight: 600;
+}
+.xn-booking {
+  background: #ffffff;
   border: 1px solid var(--xn-line);
   border-radius: 20px;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px -24px rgba(4, 44, 83, 0.25);
 }
-.xn-form-2col {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 18px;
-}
-@media (min-width: 480px) {
-  .xn-form-2col {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.xn-field label {
+.xn-booking__frame {
   display: block;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: var(--xn-ink);
-}
-.xn-field input,
-.xn-field textarea {
   width: 100%;
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid var(--xn-line);
-  background: #ffffff;
-  font: inherit;
-  font-size: 15px;
-  color: var(--xn-ink);
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.xn-field textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-.xn-field input:focus,
-.xn-field textarea:focus {
-  border-color: var(--xn-sky);
-  box-shadow: 0 0 0 4px rgba(55, 138, 221, 0.15);
-}
-.xn-form .xn-btn {
-  justify-content: center;
+  height: 720px;
+  border: 0;
 }
 
 /* ── Footer ── */
@@ -1329,17 +1300,11 @@ button:focus-visible {
     font-size: 16px;
     margin-top: -16px;
   }
-  .xn-form {
-    padding: 22px 18px;
+  .xn-booking {
     border-radius: 16px;
   }
-  .xn-field input,
-  .xn-field textarea {
-    font-size: 16px; /* prevents iOS zoom on focus */
-  }
-  .xn-form .xn-btn {
-    white-space: normal;
-    text-align: center;
+  .xn-booking__frame {
+    height: 820px;
   }
 
   .xn-footer {

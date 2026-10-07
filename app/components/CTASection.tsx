@@ -1,10 +1,22 @@
+import { CALENDLY_URL, CONTACT_EMAIL } from "../site";
 import { Icon } from "./Icons";
 
 const promises = [
+  "A 30-minute audit of where AI can save your team time",
   "A free AI tutor demo built on one of your courses",
   "A clear, measurable success target agreed up front",
   "Zero fees if we don't deliver the desired result",
 ];
+
+// Brand colours apply on paid Calendly plans; free plans ignore them.
+const calendlySrc = `${CALENDLY_URL}?${new URLSearchParams({
+  embed_type: "Inline",
+  embed_domain: "xentenix.com",
+  hide_gdpr_banner: "1",
+  primary_color: "185fa5",
+  text_color: "0a0f1a",
+  background_color: "ffffff",
+})}`;
 
 export function CTASection() {
   return (
@@ -17,7 +29,7 @@ export function CTASection() {
             <span>your learning outcomes?</span>
           </h2>
           <a href="#contact" className="xn-btn xn-btn--white">
-            Get Your Free Demo <Icon name="arrow" size={18} />
+            Book a Free AI Audit <Icon name="arrow" size={18} />
           </a>
         </div>
       </section>
@@ -25,10 +37,10 @@ export function CTASection() {
       <section id="contact" className="xn-section">
         <div className="xn-container xn-contact">
           <div>
-            <h2 className="xn-h2">Let&apos;s build your free demo</h2>
+            <h2 className="xn-h2">Book a free AI audit</h2>
             <p className="xn-contact__lead">
-              Tell us about your academy or courses. We&apos;ll reply within one business day with how
-              we&apos;d get you the result.
+              Pick a time that suits you. We&apos;ll look at your academy or courses and show you exactly
+              where AI can help.
             </p>
             <ul className="xn-checklist">
               {promises.map((item) => (
@@ -38,35 +50,19 @@ export function CTASection() {
                 </li>
               ))}
             </ul>
+            <p className="xn-contact__alt">
+              Prefer email? Write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+            </p>
           </div>
 
-          <form className="xn-form">
-            <div className="xn-form-2col">
-              <div className="xn-field">
-                <label htmlFor="firstName">First name</label>
-                <input id="firstName" name="firstName" type="text" placeholder="Jane" autoComplete="given-name" />
-              </div>
-              <div className="xn-field">
-                <label htmlFor="lastName">Last name</label>
-                <input id="lastName" name="lastName" type="text" placeholder="Smith" autoComplete="family-name" />
-              </div>
-            </div>
-            <div className="xn-field">
-              <label htmlFor="email">Work email</label>
-              <input id="email" name="email" type="email" placeholder="jane@academy.com" autoComplete="email" />
-            </div>
-            <div className="xn-field">
-              <label htmlFor="company">Academy / company</label>
-              <input id="company" name="company" type="text" placeholder="Bright Minds Academy" autoComplete="organization" />
-            </div>
-            <div className="xn-field">
-              <label htmlFor="message">What outcome do you need?</label>
-              <textarea id="message" name="message" placeholder="e.g. Our teachers spend 15 hours a week grading mock tests..." />
-            </div>
-            <button type="submit" className="xn-btn xn-btn--primary">
-              Request My Free Demo <Icon name="arrow" size={18} />
-            </button>
-          </form>
+          <div className="xn-booking">
+            <iframe
+              src={calendlySrc}
+              title="Book a free AI audit with Xentenix"
+              loading="lazy"
+              className="xn-booking__frame"
+            />
+          </div>
         </div>
       </section>
     </>

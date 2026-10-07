@@ -33,7 +33,7 @@ export function FloatingCTA() {
       aria-hidden={!visible}
       tabIndex={visible ? undefined : -1}
     >
-      Get a Free Demo <Icon name="arrow" size={16} />
+      Book a Free Audit <Icon name="arrow" size={16} />
     </a>
   );
 }

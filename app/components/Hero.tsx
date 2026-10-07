@@ -32,7 +32,7 @@ export function Hero() {
 
         <div className="xn-hero__actions">
           <a href="#contact" className="xn-btn xn-btn--primary">
-            Get a Free AI Tutor Demo <Icon name="arrow" size={18} />
+            Book a Free AI Audit <Icon name="arrow" size={18} />
           </a>
           <a href="#work" className="xn-btn xn-btn--ghost">
             See Our Work <Icon name="arrow" size={18} />

@@ -52,7 +52,7 @@ export function Nav() {
         </ul>
 
         <a href="#contact" className="xn-btn xn-btn--primary xn-btn--sm xn-nav__cta">
-          Contact Us <Icon name="arrow" size={16} />
+          Book Free Audit <Icon name="arrow" size={16} />
         </a>
 
         <button
@@ -75,7 +75,7 @@ export function Nav() {
             </a>
           ))}
           <a href="#contact" className="xn-btn xn-btn--primary" onClick={() => setOpen(false)}>
-            Contact Us <Icon name="arrow" size={16} />
+            Book Free Audit <Icon name="arrow" size={16} />
           </a>
         </div>
       )}
