@@ -706,10 +706,24 @@ pre,
   grid-template-columns: minmax(0, 1fr);
   align-items: start;
 }
+/* Calendar takes the full width so Cal.com shows its side-by-side desktop layout. */
 @media (min-width: 960px) {
-  .xn-contact {
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 64px;
+  .xn-contact__intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 72px;
+    align-items: end;
+  }
+  .xn-contact__intro .xn-h2,
+  .xn-contact__intro .xn-contact__lead {
+    grid-column: 1;
+  }
+  .xn-contact__intro .xn-checklist {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .xn-contact__intro .xn-contact__alt {
+    grid-column: 2;
   }
 }
 .xn-contact__lead {
@@ -752,11 +766,10 @@ pre,
   overflow: hidden;
   box-shadow: 0 16px 48px -24px rgba(4, 44, 83, 0.25);
 }
-.xn-booking__frame {
-  display: block;
+.xn-booking__cal {
   width: 100%;
-  height: 720px;
-  border: 0;
+  min-height: 640px;
+  overflow: auto;
 }
 
 /* ── Footer ── */
@@ -1303,8 +1316,8 @@ button:focus-visible {
   .xn-booking {
     border-radius: 16px;
   }
-  .xn-booking__frame {
-    height: 820px;
+  .xn-booking__cal {
+    min-height: 760px;
   }
 
   .xn-footer {

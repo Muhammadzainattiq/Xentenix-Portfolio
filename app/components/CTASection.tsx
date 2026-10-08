@@ -1,4 +1,5 @@
-import { BOOKING_URL, CONTACT_EMAIL } from "../site";
+import { CONTACT_EMAIL } from "../site";
+import { BookingEmbed } from "./BookingEmbed";
 import { Icon } from "./Icons";
 
 const promises = [
@@ -7,9 +8,6 @@ const promises = [
   "A clear, measurable success target agreed up front",
   "Zero fees if we don't deliver the desired result",
 ];
-
-// Cal.com's embed view drops the page chrome; brand colour comes from Cal.com Settings → Appearance.
-const bookingSrc = `${BOOKING_URL}/embed?${new URLSearchParams({ layout: "month_view", theme: "light" })}`;
 
 export function CTASection() {
   return (
@@ -29,7 +27,7 @@ export function CTASection() {
 
       <section id="contact" className="xn-section">
         <div className="xn-container xn-contact">
-          <div>
+          <div className="xn-contact__intro">
             <h2 className="xn-h2">Book a free AI audit</h2>
             <p className="xn-contact__lead">
               Pick a time that suits you. We&apos;ll look at your academy or courses and show you exactly
@@ -49,12 +47,7 @@ export function CTASection() {
           </div>
 
           <div className="xn-booking">
-            <iframe
-              src={bookingSrc}
-              title="Book a free AI audit with Xentenix"
-              loading="lazy"
-              className="xn-booking__frame"
-            />
+            <BookingEmbed />
           </div>
         </div>
       </section>
