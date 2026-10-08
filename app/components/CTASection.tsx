@@ -1,4 +1,4 @@
-import { CALENDLY_URL, CONTACT_EMAIL } from "../site";
+import { BOOKING_URL, CONTACT_EMAIL } from "../site";
 import { Icon } from "./Icons";
 
 const promises = [
@@ -8,15 +8,8 @@ const promises = [
   "Zero fees if we don't deliver the desired result",
 ];
 
-// Brand colours apply on paid Calendly plans; free plans ignore them.
-const calendlySrc = `${CALENDLY_URL}?${new URLSearchParams({
-  embed_type: "Inline",
-  embed_domain: "xentenix.com",
-  hide_gdpr_banner: "1",
-  primary_color: "185fa5",
-  text_color: "0a0f1a",
-  background_color: "ffffff",
-})}`;
+// Cal.com's embed view drops the page chrome; brand colour comes from Cal.com Settings → Appearance.
+const bookingSrc = `${BOOKING_URL}/embed?${new URLSearchParams({ layout: "month_view", theme: "light" })}`;
 
 export function CTASection() {
   return (
@@ -57,7 +50,7 @@ export function CTASection() {
 
           <div className="xn-booking">
             <iframe
-              src={calendlySrc}
+              src={bookingSrc}
               title="Book a free AI audit with Xentenix"
               loading="lazy"
               className="xn-booking__frame"
