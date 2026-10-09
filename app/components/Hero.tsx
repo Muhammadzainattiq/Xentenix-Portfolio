@@ -1,10 +1,12 @@
 import { Icon, type IconName } from "./Icons";
 
 const chips: { icon: IconName; label: string }[] = [
+  { icon: "exam", label: "Exam Grading" },
+  { icon: "chart", label: "Personalized Learning" },
   { icon: "book", label: "AI Tutors" },
-  { icon: "exam", label: "AI Assessment & Grading" },
   { icon: "layers", label: "Content-to-Course" },
-  { icon: "chat", label: "Student Support Agents" },
+  { icon: "chat", label: "Student Support" },
+  { icon: "cap", label: "Admissions" },
 ];
 
 export function Hero() {
@@ -26,8 +28,8 @@ export function Hero() {
         </h1>
 
         <p className="xn-hero__sub">
-          AI tutors, auto-grading and student-support agents for academies, course creators and training
-          companies. <strong>Don&apos;t pay a single penny if you don&apos;t get the desired result.</strong>
+          Exam grading, AI tutors, personalized learning and admissions agents for academies, colleges,
+          course creators and training companies. <strong>Don&apos;t pay a single penny if you don&apos;t get the desired result.</strong>
         </p>
 
         <div className="xn-hero__actions">

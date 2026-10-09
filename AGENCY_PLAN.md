@@ -89,8 +89,8 @@ You already have proof: about 10 shipped AI products, 4 blog posts, and past cli
 
 ## Decisions made
 - **Wider field (website and brand):** AI for Education & Training businesses.
-- **Who we serve:** test-prep and coaching academies, course creators, training and L&D companies, EdTech startups. The first outreach group stays flexible.
-- **Services:** AI Tutors, AI Assessment & Grading, Content-to-Course, Student Support & Admissions Agents.
+- **Who we serve:** test-prep and coaching academies, course creators, training and L&D companies, EdTech startups, private colleges and institutes. The first outreach group stays flexible.
+- **Services (6):** Exam Generation & Grading Agents, AI-Powered Personalized Learning Platforms, AI Tutors, Content-to-Course Automations, Student Support Agents, Admissions Agents.
 - **Entry offer / main CTA:** a free AI tutor demo built on the prospect's own course.
 - **Proof:** an infinite marquee of 10 shipped projects. EdTech projects lead (ExamineAI, PanaAI, DuoRead, Career Compass), followed by other AI work.
 

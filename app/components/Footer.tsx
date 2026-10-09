@@ -1,32 +1,34 @@
+import { CONTACT_EMAIL } from "../site";
 import { GridNodeMark } from "./GridNodeMark";
 
 const footerLinks = [
   {
     heading: "Services",
     links: [
-      { label: "AI Tutors", href: "#services" },
-      { label: "AI Assessment & Grading", href: "#services" },
-      { label: "Content-to-Course", href: "#services" },
-      { label: "Student Support Agents", href: "#services" },
+      { label: "Exam Generation & Grading", href: "/#services" },
+      { label: "Personalized Learning Platforms", href: "/#services" },
+      { label: "AI Tutors", href: "/#services" },
+      { label: "Content-to-Course", href: "/#services" },
+      { label: "Student Support Agents", href: "/#services" },
+      { label: "Admissions Agents", href: "/#services" },
     ],
   },
   {
     heading: "Company",
     links: [
-      { label: "Our Work", href: "#work" },
-      { label: "How We Work", href: "#process" },
-      { label: "Our Guarantee", href: "#difference" },
-      { label: "Contact", href: "#contact" },
+      { label: "Our Work", href: "/#work" },
+      { label: "How We Work", href: "/#process" },
+      { label: "Our Guarantee", href: "/#difference" },
+      { label: "Contact", href: "/#contact" },
       { label: "Founder", href: "https://zainattiq.com" },
     ],
   },
   {
     heading: "Resources",
     links: [
-      { label: "Documentation", href: "#" },
-      { label: "Status", href: "#" },
-      { label: "Security", href: "#" },
-      { label: "Privacy Policy", href: "#" },
+      { label: "Free AI Product Audit", href: "/#audit" },
+      { label: "Email Us", href: `mailto:${CONTACT_EMAIL}` },
+      { label: "Privacy Policy", href: "/privacy" },
     ],
   },
 ];
@@ -72,7 +74,7 @@ export function Footer() {
               Xentenix
             </div>
             <p className="xn-footer__tagline">
-              AI for education and training businesses — tutors, grading and student-support agents, backed
+              AI for education and training businesses: exam grading, tutors, personalized learning and admissions agents, backed
               by a no-result, no-pay guarantee.
             </p>
             <div className="xn-footer__social">

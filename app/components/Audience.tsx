@@ -21,6 +21,11 @@ const audiences: { icon: IconName; title: string; description: string }[] = [
     title: "EdTech Startups",
     description: "Ship AI features or a full AI-native learning product, built by engineers who've shipped them.",
   },
+  {
+    icon: "user",
+    title: "Private Colleges & Institutes",
+    description: "Answer every admissions enquiry instantly and support enrolled students around the clock.",
+  },
 ];
 
 export function Audience() {

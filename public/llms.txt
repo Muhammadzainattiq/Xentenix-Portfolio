@@ -1,0 +1,42 @@
+# Xentenix
+
+> Xentenix is an AI agency for education and training businesses. We build exam generation and grading agents, AI-powered personalized learning platforms, AI tutors, content-to-course automations, student support agents and admissions agents for test-prep and coaching academies, course creators, training and L&D companies, EdTech startups, and private colleges and institutes. Every engagement is backed by a no-result, no-pay guarantee: one measurable outcome is agreed before we build, and clients pay only if it is delivered.
+
+- Website: https://www.xentenix.com
+- Contact: hello@xentenix.com
+- Book a free AI audit: https://cal.com/xentenix/free-ai-audit
+- Founder: Muhammad Zain Attiq, https://zainattiq.com
+
+## Services
+
+- Exam Generation & Grading Agents: quizzes, mock tests and full exams generated from a client's syllabus, rubric-based grading of written answers, and personalised feedback for every student.
+- AI-Powered Personalized Learning Platforms: platforms that adapt practice and learning paths to each student, with progress and weak-area analytics, built new or added to an existing product.
+- AI Tutors: a 24/7 tutor trained on a client's own courses, notes and videos, embedded in their website, LMS or WhatsApp, with multilingual support.
+- Content-to-Course Automations: turn webinars, PDFs, slides and recordings into structured lessons, summaries, flashcards, quizzes and practice sets.
+- Student Support Agents: website, LMS and WhatsApp agents that answer current students about classes, schedules, fees and course material, and hand off to staff when needed.
+- Admissions Agents: instant replies to every enquiry, eligibility and fee questions, applicant qualification and booking of counselling calls.
+- Free AI Product Audit: for EdTech product owners, a review of an existing learning app or platform that identifies learner-journey gaps, work worth automating, AI features that fit, and a prioritised roadmap.
+
+## How we work
+
+1. Free demo on the client's own content.
+2. Agree one measurable outcome, for example halving grading time.
+3. Build and integrate with the client's website, LMS or WhatsApp.
+4. The client pays only if the agreed result is delivered.
+
+## Products we have built
+
+- [Examinie AI](https://www.examinie.online/): AI exam generation and rubric-based grading with instant feedback and analytics.
+- [IELTS Karo](https://ieltskaro.com/): AI IELTS prep for all four skills, with a live AI speaking examiner and instant band scores.
+- [PanaAI](https://panaversity.org/): agents for onboarding, learning, assessment and revision across the student journey, for Panaversity.
+- [DuoRead](https://duoread.app): turns any PDF into a study partner with chat, summaries, translations and vocabulary.
+- [TechCadets](https://www.techcadets.pk/): live online AI and coding classes for grades 5 to 12 in Pakistan.
+- [Hikmah AI](https://www.hikmahai.site/): AI companion for Dars-e-Nizami that decodes classical Arabic texts through five scholarly lenses.
+- [AgentLab](https://www.zainattiq.com/agentlab): hands-on sandbox for learning agentic AI, covering models, tool calling, MCP and memory.
+- [LLMetric](https://www.llmetric.ai/): measures and improves how brands show up in ChatGPT, Perplexity and Grok answers.
+- Epidexa: AI skin-health companion combining medical AI with dermatologist consultations.
+- Career Compass: six AI agents for resumes, interviews, learning paths and university matching.
+
+## Optional
+
+- [Privacy Policy](https://www.xentenix.com/privacy)
