@@ -74,6 +74,12 @@ const projects: Project[] = [
     image: "/work/epidexa.png",
   },
   {
+    title: "Zque 3D",
+    tag: "3D · WebAR",
+    summary: "Photoreal 3D and AR product viewers that let customers place products on their own table, no app needed.",
+    image: "/work/zque3d.png",
+  },
+  {
     title: "Career Compass",
     tag: "EdTech · Guidance",
     summary: "Six AI agents for resumes, interviews, learning paths and university matching.",
